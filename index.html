@@ -64,10 +64,32 @@
         .delete-btn:hover {
             background-color: #c0392b;
         }
+        .select-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        select {
+            padding: 5px;
+            font-size: 16px;
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body>
     <h1>物件改善清單</h1>
+
+    <div class="select-container">
+        <label for="userSelect">請問您是誰？</label>
+        <select id="userSelect" onchange="showPartnerSection()">
+            <option value="">請選擇</option>
+            <option value="林其衞">林其衞</option>
+            <option value="曾文俊">曾文俊</option>
+            <option value="林栓卯">林栓卯</option>
+            <option value="黃詩晴">黃詩晴</option>
+            <option value="桂珍珍">桂珍珍</option>
+            <option value="林緁締">林緁締</option>
+        </select>
+    </div>
 
     <!-- 林其衞 -->
     <div class="partner-section" id="林其衞">
@@ -210,143 +232,6 @@
         </table>
     </div>
 
-    <!-- 陳清淵 -->
-    <div class="partner-section" id="陳清淵">
-        <h2>陳清淵</h2>
-        <button class="delete-btn" onclick="deleteCheckedItems('陳清淵')">刪除已勾選項目</button>
-        <table>
-            <tr>
-                <th>勾選</th>
-                <th>物件</th>
-                <th>需改善的項目</th>
-            </tr>
-            <tr data-id="陳清淵-1">
-                <td><input type="checkbox" class="item-checkbox"></td>
-                <td>HA0129089 羅東國五旁大面寬雙頭路可配合申請農業設施漂亮農地</td>
-                <td class="issue">特色少於70字</td>
-            </tr>
-            <tr data-id="陳清淵-2">
-                <td><input type="checkbox" class="item-checkbox"></td>
-                <td>HA0133991 員山8米路方正好便宜好規劃可足坪農地</td>
-                <td class="issue">物件照片少於12張</td>
-            </tr>
-            <tr data-id="陳清淵-3">
-                <td><input type="checkbox" class="item-checkbox"></td>
-                <td>UG0935388 羅東中山路面寬大建坪商業區可旅館/可日照獨棟別墅</td>
-                <td class="issue">格局圖未繪製</td>
-            </tr>
-        </table>
-    </div>
-
-    <!-- 陳慶昌 -->
-    <div class="partner-section" id="陳慶昌">
-        <h2>陳慶昌</h2>
-        <button class="delete-btn" onclick="deleteCheckedItems('陳慶昌')">刪除已勾選項目</button>
-        <table>
-            <tr>
-                <th>勾選</th>
-                <th>物件</th>
-                <th>需改善的項目</th>
-            </tr>
-            <tr data-id="陳慶昌-1">
-                <td><input type="checkbox" class="item-checkbox"></td>
-                <td>HG0191406 冬山市區蛋黃區國五旁大面寬方正農地</td>
-                <td class="issue">特色少於70字</td>
-            </tr>
-            <tr data-id="陳慶昌-2">
-                <td><input type="checkbox" class="item-checkbox"></td>
-                <td>UG1051443 想當房東嗎羅東純精路上帶租約金店住</td>
-                <td class="issue">特色少於70字</td>
-            </tr>
-            <tr data-id="陳慶昌-3">
-                <td><input type="checkbox" class="item-checkbox"></td>
-                <td>HA0129079 員山鄉力麗威斯汀度假酒店附近賣持分建地</td>
-                <td class="issue">物件照片少於12張</td>
-            </tr>
-            <tr data-id="陳慶昌-4">
-                <td><input type="checkbox" class="item-checkbox"></td>
-                <td>UG1098613 生活機能佳夜間寧靜落羽松超美景觀步道社區</td>
-                <td class="issue">格局圖未繪製</td>
-            </tr>
-            <tr data-id="陳慶昌-5">
-                <td><input type="checkbox" class="item-checkbox"></td>
-                <td>UA0331180 宜蘭縣礁溪鄉龍潭村高級休閒渡假別墅</td>
-                <td class="issue">格局圖未繪製</td>
-            </tr>
-            <tr data-id="陳慶昌-6">
-                <td><input type="checkbox" class="item-checkbox"></td>
-                <td>UG1051442 礁溪鄉大透天厝在頂樓前方可瞭望龜山島景觀</td>
-                <td class="issue">格局圖未繪製</td>
-            </tr>
-            <tr data-id="陳慶昌-7">
-                <td><input type="checkbox" class="item-checkbox"></td>
-                <td>UA0331200 蘇澳鎮民貴社區蘇西公園附近邊間別墅</td>
-                <td class="issue">格局圖未繪製</td>
-            </tr>
-        </table>
-    </div>
-
-    <!-- 卓妤桐 -->
-    <div class="partner-section" id="卓妤桐">
-        <h2>卓妤桐</h2>
-        <button class="delete-btn" onclick="deleteCheckedItems('卓妤桐')">刪除已勾選項目</button>
-        <table>
-            <tr>
-                <th>勾選</th>
-                <th>物件</th>
-                <th>需改善的項目</th>
-            </tr>
-            <tr data-id="卓妤桐-1">
-                <td><input type="checkbox" class="item-checkbox"></td>
-                <td>HG0191387 壯圍海天醫院旁低總價好規劃農地</td>
-                <td class="issue">特色少於70字、物件照片少於12張、格局圖未繪製、案名少於16字</td>
-            </tr>
-            <tr data-id="卓妤桐-2">
-                <td><input type="checkbox" class="item-checkbox"></td>
-                <td>HG0191380 宜蘭壯圍壯東段低總價大坪數農建地</td>
-                <td class="issue">特色少於70字、物件照片少於12張、格局圖未繪製</td>
-            </tr>
-            <tr data-id="卓妤桐-3">
-                <td><input type="checkbox" class="item-checkbox"></td>
-                <td>HG0191361 頭城北關段超優質低價保護山坡地</td>
-                <td class="issue">特色少於70字、物件照片少於12張、案名少於16字</td>
-            </tr>
-            <tr data-id="卓妤桐-4">
-                <td><input type="checkbox" class="item-checkbox"></td>
-                <td>UG1098598 頭城超大氣派豪華渡假大別墅</td>
-                <td class="issue">特色少於70字、物件照片少於12張、格局圖未繪製、案名少於16字</td>
-            </tr>
-            <tr data-id="卓妤桐-5">
-                <td><input type="checkbox" class="item-checkbox"></td>
-                <td>HG0191376 優質學區壯東段小地坪好規劃建地</td>
-                <td class="issue">特色少於70字、物件照片少於12張、案名少於16字</td>
-            </tr>
-            <tr data-id="卓妤桐-6">
-                <td><input type="checkbox" class="item-checkbox"></td>
-                <td>UA0331186 頭城大溪蜜月灣渡假退休大坪數別墅</td>
-                <td class="issue">物件照片少於12張</td>
-            </tr>
-        </table>
-    </div>
-
-    <!-- 莊燿銘 -->
-    <div class="partner-section" id="莊燿銘">
-        <h2>莊燿銘</h2>
-        <button class="delete-btn" onclick="deleteCheckedItems('莊燿銘')">刪除已勾選項目</button>
-        <table>
-            <tr>
-                <th>勾選</th>
-                <th>物件</th>
-                <th>需改善的項目</th>
-            </tr>
-            <tr data-id="莊燿銘-1">
-                <td><input type="checkbox" class="item-checkbox"></td>
-                <td>HA0129070 頭城高潛力隱藏版魚塭</td>
-                <td class="issue">特色少於70字、案名少於16字</td>
-            </tr>
-        </table>
-    </div>
-
     <!-- 林栓卯 -->
     <div class="partner-section" id="林栓卯">
         <h2>林栓卯</h2>
@@ -423,24 +308,6 @@
         </table>
     </div>
 
-    <!-- 吳建利 -->
-    <div class="partner-section" id="吳建利">
-        <h2>吳建利</h2>
-        <button class="delete-btn" onclick="deleteCheckedItems('吳建利')">刪除已勾選項目</button>
-        <table>
-            <tr>
-                <th>勾選</th>
-                <th>物件</th>
-                <th>需改善的項目</th>
-            </tr>
-            <tr data-id="吳建利-1">
-                <td><input type="checkbox" class="item-checkbox"></td>
-                <td>HG0191365 宜蘭縣壯圍鄉國五宜蘭交流道旁超優質農地賣地送屋</td>
-                <td class="issue">特色少於70字</td>
-            </tr>
-        </table>
-    </div>
-
     <!-- 桂珍珍 -->
     <div class="partner-section" id="桂珍珍">
         <h2>桂珍珍</h2>
@@ -483,43 +350,59 @@
     </div>
 
     <script>
-        // 儲存已刪除項目的狀態
-        let deletedItems = JSON.parse(localStorage.getItem('deletedItems')) || [];
+        // 儲存每個夥伴的已刪除項目
+        function loadDeletedItems(partnerName) {
+            return JSON.parse(localStorage.getItem(`deletedItems_${partnerName}`)) || [];
+        }
 
-        // 頁面載入時隱藏已刪除的項目
-        window.onload = function() {
-            // 詢問使用者身份
-            let userName = prompt("請問您是誰？（例如：林其衞、曾文俊）");
+        // 顯示指定夥伴的區塊並隱藏已刪除的項目
+        function showPartnerSection() {
+            let userSelect = document.getElementById('userSelect');
+            let userName = userSelect.value;
+            let allSections = document.querySelectorAll('.partner-section');
+
+            // 隱藏所有區塊
+            allSections.forEach(section => section.classList.remove('visible'));
+
             if (userName) {
                 let partnerSection = document.getElementById(userName);
                 if (partnerSection) {
                     partnerSection.classList.add('visible');
+                    let deletedItems = loadDeletedItems(userName);
+                    deletedItems.forEach(itemId => {
+                        let row = document.querySelector(`#${userName} tr[data-id="${itemId}"]`);
+                        if (row) {
+                            row.remove();
+                        }
+                    });
                 } else {
                     alert("找不到您的資料，請確認姓名是否正確！");
                 }
             }
-
-            // 隱藏已刪除的項目
-            deletedItems.forEach(itemId => {
-                let row = document.querySelector(`tr[data-id="${itemId}"]`);
-                if (row) {
-                    row.remove();
-                }
-            });
-        };
+        }
 
         // 刪除已勾選項目的功能
         function deleteCheckedItems(partnerName) {
             let checkboxes = document.querySelectorAll(`#${partnerName} .item-checkbox:checked`);
+            let deletedItems = loadDeletedItems(partnerName);
+
             checkboxes.forEach(checkbox => {
                 let row = checkbox.closest('tr');
                 let itemId = row.getAttribute('data-id');
                 row.remove(); // 從頁面中移除該行
-                deletedItems.push(itemId); // 記錄已刪除的項目
+                if (!deletedItems.includes(itemId)) {
+                    deletedItems.push(itemId); // 記錄已刪除的項目
+                }
             });
-            // 儲存已刪除的項目到 localStorage
-            localStorage.setItem('deletedItems', JSON.stringify(deletedItems));
+
+            // 儲存個人化已刪除的項目到 localStorage
+            localStorage.setItem(`deletedItems_${partnerName}`, JSON.stringify(deletedItems));
         }
+
+        // 頁面載入時觸發下拉選單
+        window.onload = function() {
+            showPartnerSection(); // 初始載入時觸發一次
+        };
     </script>
 </body>
 </html>
