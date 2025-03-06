@@ -14,211 +14,281 @@
             text-align: center;
             color: #333;
         }
+        .partner-section {
+            margin-bottom: 30px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+        }
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-bottom: 30px;
-            background-color: #fff;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-top: 10px;
         }
         th, td {
             padding: 12px;
             text-align: left;
-            border: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
         }
         th {
-            background-color: #4CAF50;
+            background-color: #3498db;
             color: white;
-        }
-        tr:nth-child(even) {
-            background-color: #f9f9f9;
         }
         tr:hover {
             background-color: #f1f1f1;
         }
-        .partner-header {
-            background-color: #2196F3;
-            color: white;
-            font-size: 1.2em;
-            padding: 10px;
-        }
-        .download-btn {
-            display: block;
-            margin: 20px auto;
-            padding: 10px 20px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1em;
-        }
-        .download-btn:hover {
-            background-color: #45a049;
+        .issue {
+            color: #e74c3c;
+            font-weight: bold;
         }
     </style>
-    <!-- 引入 xlsx 庫 -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 </head>
 <body>
     <h1>物件改善清單</h1>
 
-    <table id="table-林其衞">
-        <tr class="partner-header"><th colspan="5">林其衞</th></tr>
-        <tr><th>案名</th><th>特色少於70字</th><th>物件照片少於12張</th><th>格局圖未繪製</th><th>案名少於16字</th></tr>
-        <tr><td>二結金土地公旁大面寬大地坪雙透天</td><td>是</td><td>否</td><td>否</td><td>否</td></tr>
-        <tr><td>三星上將路大路邊有建造蓋到好農地</td><td>是</td><td>是</td><td>否</td><td>否</td></tr>
-        <tr><td>三星新日興段大面寬農糧加工室</td><td>是</td><td>是</td><td>否</td><td>是</td></tr>
-        <tr><td>三星叭哩沙董事長瘋搶127坪甲建</td><td>否</td><td>是</td><td>是</td><td>否</td></tr>
-        <tr><td>礁溪袋地建地</td><td>是</td><td>是</td><td>是</td><td>是</td></tr>
-        <tr><td>員山近北后寺水源段要等等老農配建</td><td>是</td><td>是</td><td>否</td><td>否</td></tr>
-        <tr><td>宜蘭市學區大面寬可蓋獨棟透天建地</td><td>是</td><td>是</td><td>否</td><td>否</td></tr>
-        <tr><td>宜蘭中山路上土地王照公告現值賣住宅建地B</td><td>否</td><td>是</td><td>否</td><td>否</td></tr>
-        <tr><td>宜蘭轉運站精華增值商業區店住建地</td><td>否</td><td>是</td><td>是</td><td>否</td></tr>
-        <tr><td>宜蘭鎮平門前好停車舒適大坪數採光美透天</td><td>否</td><td>否</td><td>是</td><td>否</td></tr>
-        <tr><td>羅東新轉運站旁升值全新電梯店住A</td><td>否</td><td>否</td><td>是</td><td>否</td></tr>
-        <tr><td>羅東新轉運站旁升值全新電梯店住B</td><td>否</td><td>否</td><td>是</td><td>否</td></tr>
-    </table>
+    <!-- 林其衞 -->
+    <div class="partner-section">
+        <h2>林其衞</h2>
+        <table>
+            <tr>
+                <th>物件</th>
+                <th>需改善的項目</th>
+            </tr>
+            <tr>
+                <td>UG0935323 二結金土地公旁大面寬大地坪雙透天</td>
+                <td class="issue">特色少於70字</td>
+            </tr>
+            <tr>
+                <td>HG0191407 三星上將路大路邊有建造蓋到好農地</td>
+                <td class="issue">特色少於70字、物件照片少於12張</td>
+            </tr>
+            <tr>
+                <td>HG0191402 三星新日興段大面寬農糧加工室</td>
+                <td class="issue">特色少於70字、物件照片少於12張、案名少於16字</td>
+            </tr>
+            <tr>
+                <td>HG0191391 宜蘭市學區大面寬可蓋獨棟透天建地</td>
+                <td class="issue">特色少於70字、物件照片少於12張</td>
+            </tr>
+            <tr>
+                <td>UG1051455 員山大面寬可申請民宿大露台有孝親房全新農舍</td>
+                <td class="issue">特色少於70字</td>
+            </tr>
+            <tr>
+                <td>HG0191412 員山近北后寺水源段要等等老農配建</td>
+                <td class="issue">特色少於70字、物件照片少於12張</td>
+            </tr>
+            <tr>
+                <td>UG1051423 鄰近國5環市道路旁正5大房靜秘透天宅</td>
+                <td class="issue">特色少於70字</td>
+            </tr>
+            <tr>
+                <td>HA0133994 礁溪袋地建地</td>
+                <td class="issue">特色少於70字、物件照片少於12張、格局圖未繪製、案名少於16字</td>
+            </tr>
+            <tr>
+                <td>HA0133979 三星叭哩沙董事長瘋搶127坪甲建</td>
+                <td class="issue">物件照片少於12張、格局圖未繪製</td>
+            </tr>
+            <tr>
+                <td>HA0129083 宜蘭中山路上土地王照公告現值賣住宅建地B</td>
+                <td class="issue">物件照片少於12張</td>
+            </tr>
+            <tr>
+                <td>HA0129085 宜蘭轉運站精華增值商業區店住建地</td>
+                <td class="issue">物件照片少於12張、格局圖未繪製</td>
+            </tr>
+            <tr>
+                <td>HA0133985 宜蘭轉運站前住宅區雙面計畫路持分地王</td>
+                <td class="issue">物件照片少於12張</td>
+            </tr>
+            <tr>
+                <td>UG0935394 宜蘭核心商業區稀有低總價雙層店面</td>
+                <td class="issue">格局圖未繪製</td>
+            </tr>
+            <tr>
+                <td>UG1098601 宜蘭鎮平門前好停車舒適大坪數採光美透天</td>
+                <td class="issue">格局圖未繪製</td>
+            </tr>
+            <tr>
+                <td>UG1098627 羅東新轉運站旁升值全新電梯店住A</td>
+                <td class="issue">格局圖未繪製</td>
+            </tr>
+            <tr>
+                <td>UG1098629 羅東新轉運站旁升值全新電梯店住B</td>
+                <td class="issue">格局圖未繪製</td>
+            </tr>
+        </table>
+    </div>
 
-    <table id="table-曾文俊">
-        <tr class="partner-header"><th colspan="5">曾文俊</th></tr>
-        <tr><th>案名</th><th>特色少於70字</th><th>物件照片少於12張</th><th>格局圖未繪製</th><th>案名少於16字</th></tr>
-        <tr><td>中山路二段大面寬有店面賺錢住宅地</td><td>是</td><td>是</td><td>是</td><td>否</td></tr>
-        <tr><td>大吉三段饗宴旁可建農業資材室農地</td><td>否</td><td>是</td><td>是</td><td>否</td></tr>
-        <tr><td>冬山近梅花湖雙面路大面寬三角窗丁種建地</td><td>是</td><td>是</td><td>否</td><td>否</td></tr>
-        <tr><td>宜蘭市延平段離塵不離城小坪數農地</td><td>是</td><td>否</td><td>是</td><td>否</td></tr>
-        <tr><td>宜蘭市臨中山路6坪住宅建地</td><td>否</td><td>是</td><td>否</td><td>是</td></tr>
-        <tr><td>員山我幫你畫好農舍了的足坪農地</td><td>否</td><td>否</td><td>否</td><td>是</td></tr>
-        <tr><td>閱讀翡冷翠NO.6嵐莊-大溪優質社區愜意康莊墅</td><td>否</td><td>否</td><td>是</td><td>否</td></tr>
-    </table>
+    <!-- 曾文俊 -->
+    <div class="partner-section">
+        <h2>曾文俊</h2>
+        <table>
+            <tr>
+                <th>物件</th>
+                <th>需改善的項目</th>
+            </tr>
+            <tr>
+                <td>HG0191410 中山路二段大面寬有店面賺錢住宅地</td>
+                <td class="issue">特色少於70字、物件照片少於12張、格局圖未繪製</td>
+            </tr>
+            <tr>
+                <td>HA0134015 冬山近梅花湖雙面路大面寬三角窗丁種建地</td>
+                <td class="issue">特色少於70字、物件照片少於12張</td>
+            </tr>
+            <tr>
+                <td>HA0134003 宜蘭市延平段離塵不離城小坪數農地</td>
+                <td class="issue">特色少於70字、格局圖未繪製</td>
+            </tr>
+            <tr>
+                <td>HA0134012 大吉三段饗宴旁可建農業資材室農地</td>
+                <td class="issue">物件照片少於12張、格局圖未繪製</td>
+            </tr>
+            <tr>
+                <td>HA0129052 宜蘭市臨中山路6坪住宅建地</td>
+                <td class="issue">物件照片少於12張、案名少於16字</td>
+            </tr>
+            <tr>
+                <td>HG0191401 員山我幫你畫好農舍了的足坪農地</td>
+                <td class="issue">格局圖未繪製、案名少於16字</td>
+            </tr>
+            <tr>
+                <td>UA0331178 閱讀翡冷翠NO.6嵐莊-大溪優質社區愜意康莊墅</td>
+                <td class="issue">格局圖未繪製</td>
+            </tr>
+        </table>
+    </div>
 
-    <table id="table-陳清淵">
-        <tr class="partner-header"><th colspan="5">陳清淵</th></tr>
-        <tr><th>案名</th><th>特色少於70字</th><th>物件照片少於12張</th><th>格局圖未繪製</th><th>案名少於16字</th></tr>
-        <tr><td>羅東國五旁大面寬雙頭路可配合申請農業設施漂亮農地</td><td>是</td><td>是</td><td>否</td><td>否</td></tr>
-        <tr><td>員山8米路方正好便宜好規劃可足坪農地</td><td>是</td><td>是</td><td>否</td><td>否</td></tr>
-        <tr><td>羅東中山路面寬大建坪商業區可旅館/可日照獨棟別墅</td><td>否</td><td>否</td><td>是</td><td>否</td></tr>
-    </table>
+    <!-- 陳慶昌 -->
+    <div class="partner-section">
+        <h2>陳慶昌</h2>
+        <table>
+            <tr>
+                <th>物件</th>
+                <th>需改善的項目</th>
+            </tr>
+            <tr>
+                <td>HG0191406 冬山市區蛋黃區國五旁大面寬方正農地</td>
+                <td class="issue">特色少於70字</td>
+            </tr>
+            <tr>
+                <td>UG1051443 想當房東嗎羅東純精路上帶租約金店住</td>
+                <td class="issue">特色少於70字</td>
+            </tr>
+            <tr>
+                <td>HA0129079 員山鄉力麗威斯汀度假酒店附近賣持分建地</td>
+                <td class="issue">物件照片少於12張</td>
+            </tr>
+            <tr>
+                <td>UG1098613 生活機能佳夜間寧靜落羽松超美景觀步道社區</td>
+                <td class="issue">格局圖未繪製</td>
+            </tr>
+            <tr>
+                <td>UA0331180 宜蘭縣礁溪鄉龍潭村高級休閒渡假別墅</td>
+                <td class="issue">格局圖未繪製</td>
+            </tr>
+            <tr>
+                <td>UG1051442 礁溪鄉大透天厝在頂樓前方可瞭望龜山島景觀</td>
+                <td class="issue">格局圖未繪製</td>
+            </tr>
+            <tr>
+                <td>UA0331200 蘇澳鎮民貴社區蘇西公園附近邊間別墅</td>
+                <td class="issue">格局圖未繪製</td>
+            </tr>
+        </table>
+    </div>
 
-    <table id="table-林栓卯">
-        <tr class="partner-header"><th colspan="5">林栓卯</th></tr>
-        <tr><th>案名</th><th>特色少於70字</th><th>物件照片少於12張</th><th>格局圖未繪製</th><th>案名少於16字</th></tr>
-        <tr><td>礁溪最棒蛋黃區溫泉建地676基地</td><td>是</td><td>否</td><td>是</td><td>否</td></tr>
-        <tr><td>礁溪溫泉視野廣闊之民宅</td><td>是</td><td>否</td><td>否</td><td>是</td></tr>
-        <tr><td>礁溪臨五星飯店步道公園之溫泉建地</td><td>否</td><td>是</td><td>否</td><td>否</td></tr>
-    </table>
+    <!-- 林栓卯 -->
+    <div class="partner-section">
+        <h2>林栓卯</h2>
+        <table>
+            <tr>
+                <th>物件</th>
+                <th>需改善的項目</th>
+            </tr>
+            <tr>
+                <td>HA0129084 礁溪最棒蛋黃區溫泉建地676基地</td>
+                <td class="issue">格局圖未繪製</td>
+            </tr>
+            <tr>
+                <td>UA0359621 礁溪溫泉視野廣闊之民宅</td>
+                <td class="issue">案名少於16字</td>
+            </tr>
+        </table>
+    </div>
 
-    <table id="table-林緁締">
-        <tr class="partner-header"><th colspan="5">林緁締</th></tr>
-        <tr><th>案名</th><th>特色少於70字</th><th>物件照片少於12張</th><th>格局圖未繪製</th><th>案名少於16字</th></tr>
-        <tr><td>壯圍新南免百萬稀有小農地排水要線旁</td><td>否</td><td>否</td><td>是</td><td>否</td></tr>
-        <tr><td>花蓮吉安黃金地段多元合一透天店住</td><td>否</td><td>否</td><td>是</td><td>否</td></tr>
-    </table>
+    <!-- 黃詩晴 -->
+    <div class="partner-section">
+        <h2>黃詩晴</h2>
+        <table>
+            <tr>
+                <th>物件</th>
+                <th>需改善的項目</th>
+            </tr>
+            <tr>
+                <td>UG1098609 宜蘭市中心高投報美妝六套房華廈</td>
+                <td class="issue">物件照片少於12張、案名少於16字</td>
+            </tr>
+            <tr>
+                <td>HG0191374 近縣政中心凱旋二段未來高鐵預定農地</td>
+                <td class="issue">物件照片少於12張</td>
+            </tr>
+            <tr>
+                <td>HG0191418 臨近縣政中心凱旋二段鬧中取靜建地</td>
+                <td class="issue">物件照片少於12張、格局圖未繪製</td>
+            </tr>
+            <tr>
+                <td>HG0203851 舊寮溪畔近市區雙面路優美電梯農舍</td>
+                <td class="issue">物件照片少於12張</td>
+            </tr>
+            <tr>
+                <td>HA0139902 礁溪頭城交流道旁卡位趁早136坪鄉村乙建</td>
+                <td class="issue">物件照片少於12張、格局圖未繪製</td>
+            </tr>
+            <tr>
+                <td>UG1098607 近新月全新裝潢拎包入住機能美寓</td>
+                <td class="issue">格局圖未繪製、案名少於16字</td>
+            </tr>
+            <tr>
+                <td>HG0191392 宜蘭高鐵預定站旁近國五方正美農地</td>
+                <td class="issue">格局圖未繪製</td>
+            </tr>
+            <tr>
+                <td>UG1098612 近羅東邊間3房大坪數挑高華廈</td>
+                <td class="issue">格局圖未繪製、案名少於16字</td>
+            </tr>
+        </table>
+    </div>
 
-    <table id="table-卓妤桐">
-        <tr class="partner-header"><th colspan="5">卓妤桐</th></tr>
-        <tr><th>案名</th><th>特色少於70字</th><th>物件照片少於12張</th><th>格局圖未繪製</th><th>案名少於16字</th></tr>
-        <tr><td>壯圍海天醫院旁低總價好規劃農地</td><td>是</td><td>是</td><td>是</td><td>是</td></tr>
-        <tr><td>宜蘭壯圍壯東段低總價大坪數農建地</td><td>是</td><td>是</td><td>是</td><td>否</td></tr>
-        <tr><td>頭城北關段超優質低價保護山坡地</td><td>是</td><td>是</td><td>否</td><td>是</td></tr>
-        <tr><td>頭城超大氣派豪華渡假大別墅</td><td>是</td><td>是</td><td>是</td><td>是</td></tr>
-        <tr><td>優質學區壯東段小地坪好規劃建地</td><td>是</td><td>是</td><td>否</td><td>是</td></tr>
-        <tr><td>頭城大溪蜜月灣渡假退休大坪數別墅</td><td>否</td><td>是</td><td>否</td><td>否</td></tr>
-    </table>
+    <!-- 夥伴 -->
+    <div class="partner-section">
+        <h2>夥伴</h2>
+        <table>
+            <tr>
+                <th>物件</th>
+                <th>需改善的項目</th>
+            </tr>
+            <tr>
+                <td>UG1098625 優美華夏 台大校園 宜蘭大學 神農商圈 (桂珍珍)</td>
+                <td class="issue">特色少於70字</td>
+            </tr>
+            <tr>
+                <td>HA0134019 壯圍新南免百萬稀有小農地排水要線旁 (林緁締)</td>
+                <td class="issue">格局圖未繪製</td>
+            </tr>
+            <tr>
+                <td>UA0359635 花蓮吉安黃金地段多元合一透天店住 (林緁締)</td>
+                <td class="issue">格局圖未繪製</td>
+            </tr>
+        </table>
+    </div>
 
-    <table id="table-黃詩晴">
-        <tr class="partner-header"><th colspan="5">黃詩晴</th></tr>
-        <tr><th>案名</th><th>特色少於70字</th><th>物件照片少於12張</th><th>格局圖未繪製</th><th>案名少於16字</th></tr>
-        <tr><td>宜蘭市中心高投報美妝六套房華廈</td><td>否</td><td>是</td><td>否</td><td>是</td></tr>
-        <tr><td>宜蘭轉運站前住宅區雙面計畫路持分地王</td><td>否</td><td>是</td><td>否</td><td>否</td></tr>
-        <tr><td>近新月全新裝潢拎包入住機能美寓</td><td>否</td><td>是</td><td>是</td><td>是</td></tr>
-        <tr><td>近羅東邊間3房大坪數挑高華廈</td><td>否</td><td>否</td><td>是</td><td>是</td></tr>
-        <tr><td>近縣政中心凱旋二段未來高鐵預定農地</td><td>否</td><td>是</td><td>是</td><td>否</td></tr>
-        <tr><td>礁溪頭城交流道旁卡位趁早136坪鄉村乙建</td><td>否</td><td>是</td><td>是</td><td>否</td></tr>
-        <tr><td>臨近縣政中心凱旋二段鬧中取靜建地</td><td>否</td><td>是</td><td>是</td><td>否</td></tr>
-        <tr><td>舊寮溪畔近市區雙面路優美電梯農舍</td><td>否</td><td>是</td><td>否</td><td>否</td></tr>
-        <tr><td>宜蘭高鐵預定站旁近國五方正美農地</td><td>否</td><td>否</td><td>是</td><td>否</td></tr>
-    </table>
-
-    <table id="table-陳慶昌">
-        <tr class="partner-header"><th colspan="5">陳慶昌</th></tr>
-        <tr><th>案名</th><th>特色少於70字</th><th>物件照片少於12張</th><th>格局圖未繪製</th><th>案名少於16字</th></tr>
-        <tr><td>冬山市區蛋黃區國五旁大面寬方正農地</td><td>是</td><td>否</td><td>否</td><td>否</td></tr>
-        <tr><td>員山鄉力麗威斯汀度假酒店附近賣持分建地</td><td>否</td><td>是</td><td>否</td><td>否</td></tr>
-        <tr><td>生活機能佳夜間寧靜落羽松超美景觀步道社區</td><td>否</td><td>否</td><td>是</td><td>否</td></tr>
-        <tr><td>宜蘭縣礁溪鄉龍潭村高級休閒渡假別墅</td><td>否</td><td>否</td><td>是</td><td>否</td></tr>
-        <tr><td>礁溪鄉大透天厝在頂樓前方可瞭望龜山島景觀</td><td>否</td><td>否</td><td>是</td><td>否</td></tr>
-        <tr><td>蘇澳鎮民貴社區蘇西公園附近邊間別墅</td><td>否</td><td>否</td><td>是</td><td>否</td></tr>
-    </table>
-
-    <table id="table-莊燿銘">
-        <tr class="partner-header"><th colspan="5">莊燿銘</th></tr>
-        <tr><th>案名</th><th>特色少於70字</th><th>物件照片少於12張</th><th>格局圖未繪製</th><th>案名少於16字</th></tr>
-        <tr><td>頭城高潛力隱藏版魚塭</td><td>是</td><td>是</td><td>否</td><td>是</td></tr>
-    </table>
-
-    <table id="table-桂珍珍">
-        <tr class="partner-header"><th colspan="5">桂珍珍</th></tr>
-        <tr><th>案名</th><th>特色少於70字</th><th>物件照片少於12張</th><th>格局圖未繪製</th><th>案名少於16字</th></tr>
-        <tr><td>優美華夏 台大校園 宜蘭大學 神農商圈</td><td>是</td><td>是</td><td>否</td><td>否</td></tr>
-    </table>
-
-    <table id="table-吳建利">
-        <tr class="partner-header"><th colspan="5">吳建利</th></tr>
-        <tr><th>案名</th><th>特色少於70字</th><th>物件照片少於12張</th><th>格局圖未繪製</th><th>案名少於16字</th></tr>
-        <tr><td>宜蘭縣壯圍鄉國五宜蘭交流道旁超優質農地賣地送屋</td><td>是</td><td>否</td><td>否</td><td>否</td></tr>
-    </table>
-
-    <button class="download-btn" onclick="downloadExcel()">下載 Excel</button>
-
-    <script>
-        function downloadExcel() {
-            // 定義所有表格的 ID 和夥伴名稱
-            const tables = [
-                { id: "table-林其衞", partner: "林其衞" },
-                { id: "table-曾文俊", partner: "曾文俊" },
-                { id: "table-陳清淵", partner: "陳清淵" },
-                { id: "table-林栓卯", partner: "林栓卯" },
-                { id: "table-林緁締", partner: "林緁締" },
-                { id: "table-卓妤桐", partner: "卓妤桐" },
-                { id: "table-黃詩晴", partner: "黃詩晴" },
-                { id: "table-陳慶昌", partner: "陳慶昌" },
-                { id: "table-莊燿銘", partner: "莊燿銘" },
-                { id: "table-桂珍珍", partner: "桂珍珍" },
-                { id: "table-吳建利", partner: "吳建利" }
-            ];
-
-            // 準備數據陣列
-            let data = [
-                ["夥伴姓名", "案名", "特色少於70字", "物件照片少於12張", "格局圖未繪製", "案名少於16字"]
-            ];
-
-            // 遍歷每個表格
-            tables.forEach(tableInfo => {
-                const table = document.getElementById(tableInfo.id);
-                const rows = table.getElementsByTagName("tr");
-                for (let i = 2; i < rows.length; i++) { // 從第 2 行開始（跳過標頭）
-                    const cells = rows[i].getElementsByTagName("td");
-                    const rowData = [
-                        tableInfo.partner,
-                        cells[0].innerText,
-                        cells[1].innerText,
-                        cells[2].innerText,
-                        cells[3].innerText,
-                        cells[4].innerText
-                    ];
-                    data.push(rowData);
-                }
-            });
-
-            // 創建工作簿和工作表
-            const wb = XLSX.utils.book_new();
-            const ws = XLSX.utils.aoa_to_sheet(data);
-            XLSX.utils.book_append_sheet(wb, ws, "物件改善清單");
-
-            // 導出 Excel 文件
-            XLSX.writeFile(wb, "物件改善清單.xlsx");
-        }
-    </script>
 </body>
 </html>
