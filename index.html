@@ -20,6 +20,10 @@
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            display: none; /* 預設隱藏所有區塊 */
+        }
+        .visible {
+            display: block; /* 顯示特定夥伴的區塊 */
         }
         h2 {
             color: #2c3e50;
@@ -47,80 +51,111 @@
             color: #e74c3c;
             font-weight: bold;
         }
+        .delete-btn {
+            display: block;
+            margin: 10px 0;
+            padding: 10px 20px;
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .delete-btn:hover {
+            background-color: #c0392b;
+        }
     </style>
 </head>
 <body>
     <h1>物件改善清單</h1>
 
     <!-- 林其衞 -->
-    <div class="partner-section">
+    <div class="partner-section" id="林其衞">
         <h2>林其衞</h2>
+        <button class="delete-btn" onclick="deleteCheckedItems('林其衞')">刪除已勾選項目</button>
         <table>
             <tr>
+                <th>勾選</th>
                 <th>物件</th>
                 <th>需改善的項目</th>
             </tr>
-            <tr>
+            <tr data-id="林其衞-1">
+                <td><input type="checkbox" class="item-checkbox"></td>
                 <td>UG0935323 二結金土地公旁大面寬大地坪雙透天</td>
                 <td class="issue">特色少於70字</td>
             </tr>
-            <tr>
+            <tr data-id="林其衞-2">
+                <td><input type="checkbox" class="item-checkbox"></td>
                 <td>HG0191407 三星上將路大路邊有建造蓋到好農地</td>
                 <td class="issue">特色少於70字、物件照片少於12張</td>
             </tr>
-            <tr>
+            <tr data-id="林其衞-3">
+                <td><input type="checkbox" class="item-checkbox"></td>
                 <td>HG0191402 三星新日興段大面寬農糧加工室</td>
                 <td class="issue">特色少於70字、物件照片少於12張、案名少於16字</td>
             </tr>
-            <tr>
+            <tr data-id="林其衞-4">
+                <td><input type="checkbox" class="item-checkbox"></td>
                 <td>HG0191391 宜蘭市學區大面寬可蓋獨棟透天建地</td>
                 <td class="issue">特色少於70字、物件照片少於12張</td>
             </tr>
-            <tr>
+            <tr data-id="林其衞-5">
+                <td><input type="checkbox" class="item-checkbox"></td>
                 <td>UG1051455 員山大面寬可申請民宿大露台有孝親房全新農舍</td>
                 <td class="issue">特色少於70字</td>
             </tr>
-            <tr>
+            <tr data-id="林其衞-6">
+                <td><input type="checkbox" class="item-checkbox"></td>
                 <td>HG0191412 員山近北后寺水源段要等等老農配建</td>
                 <td class="issue">特色少於70字、物件照片少於12張</td>
             </tr>
-            <tr>
+            <tr data-id="林其衞-7">
+                <td><input type="checkbox" class="item-checkbox"></td>
                 <td>UG1051423 鄰近國5環市道路旁正5大房靜秘透天宅</td>
                 <td class="issue">特色少於70字</td>
             </tr>
-            <tr>
+            <tr data-id="林其衞-8">
+                <td><input type="checkbox" class="item-checkbox"></td>
                 <td>HA0133994 礁溪袋地建地</td>
                 <td class="issue">特色少於70字、物件照片少於12張、格局圖未繪製、案名少於16字</td>
             </tr>
-            <tr>
+            <tr data-id="林其衞-9">
+                <td><input type="checkbox" class="item-checkbox"></td>
                 <td>HA0133979 三星叭哩沙董事長瘋搶127坪甲建</td>
                 <td class="issue">物件照片少於12張、格局圖未繪製</td>
             </tr>
-            <tr>
+            <tr data-id="林其衞-10">
+                <td><input type="checkbox" class="item-checkbox"></td>
                 <td>HA0129083 宜蘭中山路上土地王照公告現值賣住宅建地B</td>
                 <td class="issue">物件照片少於12張</td>
             </tr>
-            <tr>
+            <tr data-id="林其衞-11">
+                <td><input type="checkbox" class="item-checkbox"></td>
                 <td>HA0129085 宜蘭轉運站精華增值商業區店住建地</td>
                 <td class="issue">物件照片少於12張、格局圖未繪製</td>
             </tr>
-            <tr>
+            <tr data-id="林其衞-12">
+                <td><input type="checkbox" class="item-checkbox"></td>
                 <td>HA0133985 宜蘭轉運站前住宅區雙面計畫路持分地王</td>
                 <td class="issue">物件照片少於12張</td>
             </tr>
-            <tr>
+            <tr data-id="林其衞-13">
+                <td><input type="checkbox" class="item-checkbox"></td>
                 <td>UG0935394 宜蘭核心商業區稀有低總價雙層店面</td>
                 <td class="issue">格局圖未繪製</td>
             </tr>
-            <tr>
+            <tr data-id="林其衞-14">
+                <td><input type="checkbox" class="item-checkbox"></td>
                 <td>UG1098601 宜蘭鎮平門前好停車舒適大坪數採光美透天</td>
                 <td class="issue">格局圖未繪製</td>
             </tr>
-            <tr>
+            <tr data-id="林其衞-15">
+                <td><input type="checkbox" class="item-checkbox"></td>
                 <td>UG1098627 羅東新轉運站旁升值全新電梯店住A</td>
                 <td class="issue">格局圖未繪製</td>
             </tr>
-            <tr>
+            <tr data-id="林其衞-16">
+                <td><input type="checkbox" class="item-checkbox"></td>
                 <td>UG1098629 羅東新轉運站旁升值全新電梯店住B</td>
                 <td class="issue">格局圖未繪製</td>
             </tr>
@@ -128,96 +163,207 @@
     </div>
 
     <!-- 曾文俊 -->
-    <div class="partner-section">
+    <div class="partner-section" id="曾文俊">
         <h2>曾文俊</h2>
+        <button class="delete-btn" onclick="deleteCheckedItems('曾文俊')">刪除已勾選項目</button>
         <table>
             <tr>
+                <th>勾選</th>
                 <th>物件</th>
                 <th>需改善的項目</th>
             </tr>
-            <tr>
+            <tr data-id="曾文俊-1">
+                <td><input type="checkbox" class="item-checkbox"></td>
                 <td>HG0191410 中山路二段大面寬有店面賺錢住宅地</td>
                 <td class="issue">特色少於70字、物件照片少於12張、格局圖未繪製</td>
             </tr>
-            <tr>
+            <tr data-id="曾文俊-2">
+                <td><input type="checkbox" class="item-checkbox"></td>
                 <td>HA0134015 冬山近梅花湖雙面路大面寬三角窗丁種建地</td>
                 <td class="issue">特色少於70字、物件照片少於12張</td>
             </tr>
-            <tr>
+            <tr data-id="曾文俊-3">
+                <td><input type="checkbox" class="item-checkbox"></td>
                 <td>HA0134003 宜蘭市延平段離塵不離城小坪數農地</td>
                 <td class="issue">特色少於70字、格局圖未繪製</td>
             </tr>
-            <tr>
+            <tr data-id="曾文俊-4">
+                <td><input type="checkbox" class="item-checkbox"></td>
                 <td>HA0134012 大吉三段饗宴旁可建農業資材室農地</td>
                 <td class="issue">物件照片少於12張、格局圖未繪製</td>
             </tr>
-            <tr>
+            <tr data-id="曾文俊-5">
+                <td><input type="checkbox" class="item-checkbox"></td>
                 <td>HA0129052 宜蘭市臨中山路6坪住宅建地</td>
                 <td class="issue">物件照片少於12張、案名少於16字</td>
             </tr>
-            <tr>
+            <tr data-id="曾文俊-6">
+                <td><input type="checkbox" class="item-checkbox"></td>
                 <td>HG0191401 員山我幫你畫好農舍了的足坪農地</td>
                 <td class="issue">格局圖未繪製、案名少於16字</td>
             </tr>
-            <tr>
+            <tr data-id="曾文俊-7">
+                <td><input type="checkbox" class="item-checkbox"></td>
                 <td>UA0331178 閱讀翡冷翠NO.6嵐莊-大溪優質社區愜意康莊墅</td>
                 <td class="issue">格局圖未繪製</td>
             </tr>
         </table>
     </div>
 
-    <!-- 陳慶昌 -->
-    <div class="partner-section">
-        <h2>陳慶昌</h2>
+    <!-- 陳清淵 -->
+    <div class="partner-section" id="陳清淵">
+        <h2>陳清淵</h2>
+        <button class="delete-btn" onclick="deleteCheckedItems('陳清淵')">刪除已勾選項目</button>
         <table>
             <tr>
+                <th>勾選</th>
                 <th>物件</th>
                 <th>需改善的項目</th>
             </tr>
+            <tr data-id="陳清淵-1">
+                <td><input type="checkbox" class="item-checkbox"></td>
+                <td>HA0129089 羅東國五旁大面寬雙頭路可配合申請農業設施漂亮農地</td>
+                <td class="issue">特色少於70字</td>
+            </tr>
+            <tr data-id="陳清淵-2">
+                <td><input type="checkbox" class="item-checkbox"></td>
+                <td>HA0133991 員山8米路方正好便宜好規劃可足坪農地</td>
+                <td class="issue">物件照片少於12張</td>
+            </tr>
+            <tr data-id="陳清淵-3">
+                <td><input type="checkbox" class="item-checkbox"></td>
+                <td>UG0935388 羅東中山路面寬大建坪商業區可旅館/可日照獨棟別墅</td>
+                <td class="issue">格局圖未繪製</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- 陳慶昌 -->
+    <div class="partner-section" id="陳慶昌">
+        <h2>陳慶昌</h2>
+        <button class="delete-btn" onclick="deleteCheckedItems('陳慶昌')">刪除已勾選項目</button>
+        <table>
             <tr>
+                <th>勾選</th>
+                <th>物件</th>
+                <th>需改善的項目</th>
+            </tr>
+            <tr data-id="陳慶昌-1">
+                <td><input type="checkbox" class="item-checkbox"></td>
                 <td>HG0191406 冬山市區蛋黃區國五旁大面寬方正農地</td>
                 <td class="issue">特色少於70字</td>
             </tr>
-            <tr>
+            <tr data-id="陳慶昌-2">
+                <td><input type="checkbox" class="item-checkbox"></td>
                 <td>UG1051443 想當房東嗎羅東純精路上帶租約金店住</td>
                 <td class="issue">特色少於70字</td>
             </tr>
-            <tr>
+            <tr data-id="陳慶昌-3">
+                <td><input type="checkbox" class="item-checkbox"></td>
                 <td>HA0129079 員山鄉力麗威斯汀度假酒店附近賣持分建地</td>
                 <td class="issue">物件照片少於12張</td>
             </tr>
-            <tr>
+            <tr data-id="陳慶昌-4">
+                <td><input type="checkbox" class="item-checkbox"></td>
                 <td>UG1098613 生活機能佳夜間寧靜落羽松超美景觀步道社區</td>
                 <td class="issue">格局圖未繪製</td>
             </tr>
-            <tr>
+            <tr data-id="陳慶昌-5">
+                <td><input type="checkbox" class="item-checkbox"></td>
                 <td>UA0331180 宜蘭縣礁溪鄉龍潭村高級休閒渡假別墅</td>
                 <td class="issue">格局圖未繪製</td>
             </tr>
-            <tr>
+            <tr data-id="陳慶昌-6">
+                <td><input type="checkbox" class="item-checkbox"></td>
                 <td>UG1051442 礁溪鄉大透天厝在頂樓前方可瞭望龜山島景觀</td>
                 <td class="issue">格局圖未繪製</td>
             </tr>
-            <tr>
+            <tr data-id="陳慶昌-7">
+                <td><input type="checkbox" class="item-checkbox"></td>
                 <td>UA0331200 蘇澳鎮民貴社區蘇西公園附近邊間別墅</td>
                 <td class="issue">格局圖未繪製</td>
             </tr>
         </table>
     </div>
 
-    <!-- 林栓卯 -->
-    <div class="partner-section">
-        <h2>林栓卯</h2>
+    <!-- 卓妤桐 -->
+    <div class="partner-section" id="卓妤桐">
+        <h2>卓妤桐</h2>
+        <button class="delete-btn" onclick="deleteCheckedItems('卓妤桐')">刪除已勾選項目</button>
         <table>
             <tr>
+                <th>勾選</th>
                 <th>物件</th>
                 <th>需改善的項目</th>
             </tr>
+            <tr data-id="卓妤桐-1">
+                <td><input type="checkbox" class="item-checkbox"></td>
+                <td>HG0191387 壯圍海天醫院旁低總價好規劃農地</td>
+                <td class="issue">特色少於70字、物件照片少於12張、格局圖未繪製、案名少於16字</td>
+            </tr>
+            <tr data-id="卓妤桐-2">
+                <td><input type="checkbox" class="item-checkbox"></td>
+                <td>HG0191380 宜蘭壯圍壯東段低總價大坪數農建地</td>
+                <td class="issue">特色少於70字、物件照片少於12張、格局圖未繪製</td>
+            </tr>
+            <tr data-id="卓妤桐-3">
+                <td><input type="checkbox" class="item-checkbox"></td>
+                <td>HG0191361 頭城北關段超優質低價保護山坡地</td>
+                <td class="issue">特色少於70字、物件照片少於12張、案名少於16字</td>
+            </tr>
+            <tr data-id="卓妤桐-4">
+                <td><input type="checkbox" class="item-checkbox"></td>
+                <td>UG1098598 頭城超大氣派豪華渡假大別墅</td>
+                <td class="issue">特色少於70字、物件照片少於12張、格局圖未繪製、案名少於16字</td>
+            </tr>
+            <tr data-id="卓妤桐-5">
+                <td><input type="checkbox" class="item-checkbox"></td>
+                <td>HG0191376 優質學區壯東段小地坪好規劃建地</td>
+                <td class="issue">特色少於70字、物件照片少於12張、案名少於16字</td>
+            </tr>
+            <tr data-id="卓妤桐-6">
+                <td><input type="checkbox" class="item-checkbox"></td>
+                <td>UA0331186 頭城大溪蜜月灣渡假退休大坪數別墅</td>
+                <td class="issue">物件照片少於12張</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- 莊燿銘 -->
+    <div class="partner-section" id="莊燿銘">
+        <h2>莊燿銘</h2>
+        <button class="delete-btn" onclick="deleteCheckedItems('莊燿銘')">刪除已勾選項目</button>
+        <table>
             <tr>
+                <th>勾選</th>
+                <th>物件</th>
+                <th>需改善的項目</th>
+            </tr>
+            <tr data-id="莊燿銘-1">
+                <td><input type="checkbox" class="item-checkbox"></td>
+                <td>HA0129070 頭城高潛力隱藏版魚塭</td>
+                <td class="issue">特色少於70字、案名少於16字</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- 林栓卯 -->
+    <div class="partner-section" id="林栓卯">
+        <h2>林栓卯</h2>
+        <button class="delete-btn" onclick="deleteCheckedItems('林栓卯')">刪除已勾選項目</button>
+        <table>
+            <tr>
+                <th>勾選</th>
+                <th>物件</th>
+                <th>需改善的項目</th>
+            </tr>
+            <tr data-id="林栓卯-1">
+                <td><input type="checkbox" class="item-checkbox"></td>
                 <td>HA0129084 礁溪最棒蛋黃區溫泉建地676基地</td>
                 <td class="issue">格局圖未繪製</td>
             </tr>
-            <tr>
+            <tr data-id="林栓卯-2">
+                <td><input type="checkbox" class="item-checkbox"></td>
                 <td>UA0359621 礁溪溫泉視野廣闊之民宅</td>
                 <td class="issue">案名少於16字</td>
             </tr>
@@ -225,57 +371,88 @@
     </div>
 
     <!-- 黃詩晴 -->
-    <div class="partner-section">
+    <div class="partner-section" id="黃詩晴">
         <h2>黃詩晴</h2>
+        <button class="delete-btn" onclick="deleteCheckedItems('黃詩晴')">刪除已勾選項目</button>
         <table>
             <tr>
+                <th>勾選</th>
                 <th>物件</th>
                 <th>需改善的項目</th>
             </tr>
-            <tr>
+            <tr data-id="黃詩晴-1">
+                <td><input type="checkbox" class="item-checkbox"></td>
                 <td>UG1098609 宜蘭市中心高投報美妝六套房華廈</td>
                 <td class="issue">物件照片少於12張、案名少於16字</td>
             </tr>
-            <tr>
+            <tr data-id="黃詩晴-2">
+                <td><input type="checkbox" class="item-checkbox"></td>
                 <td>HG0191374 近縣政中心凱旋二段未來高鐵預定農地</td>
                 <td class="issue">物件照片少於12張</td>
             </tr>
-            <tr>
+            <tr data-id="黃詩晴-3">
+                <td><input type="checkbox" class="item-checkbox"></td>
                 <td>HG0191418 臨近縣政中心凱旋二段鬧中取靜建地</td>
                 <td class="issue">物件照片少於12張、格局圖未繪製</td>
             </tr>
-            <tr>
+            <tr data-id="黃詩晴-4">
+                <td><input type="checkbox" class="item-checkbox"></td>
                 <td>HG0203851 舊寮溪畔近市區雙面路優美電梯農舍</td>
                 <td class="issue">物件照片少於12張</td>
             </tr>
-            <tr>
+            <tr data-id="黃詩晴-5">
+                <td><input type="checkbox" class="item-checkbox"></td>
                 <td>HA0139902 礁溪頭城交流道旁卡位趁早136坪鄉村乙建</td>
                 <td class="issue">物件照片少於12張、格局圖未繪製</td>
             </tr>
-            <tr>
+            <tr data-id="黃詩晴-6">
+                <td><input type="checkbox" class="item-checkbox"></td>
                 <td>UG1098607 近新月全新裝潢拎包入住機能美寓</td>
                 <td class="issue">格局圖未繪製、案名少於16字</td>
             </tr>
-            <tr>
+            <tr data-id="黃詩晴-7">
+                <td><input type="checkbox" class="item-checkbox"></td>
                 <td>HG0191392 宜蘭高鐵預定站旁近國五方正美農地</td>
                 <td class="issue">格局圖未繪製</td>
             </tr>
-            <tr>
+            <tr data-id="黃詩晴-8">
+                <td><input type="checkbox" class="item-checkbox"></td>
                 <td>UG1098612 近羅東邊間3房大坪數挑高華廈</td>
                 <td class="issue">格局圖未繪製、案名少於16字</td>
             </tr>
         </table>
     </div>
 
-    <!-- 桂珍珍 -->
-    <div class="partner-section">
-        <h2>桂珍珍</h2>
+    <!-- 吳建利 -->
+    <div class="partner-section" id="吳建利">
+        <h2>吳建利</h2>
+        <button class="delete-btn" onclick="deleteCheckedItems('吳建利')">刪除已勾選項目</button>
         <table>
             <tr>
+                <th>勾選</th>
                 <th>物件</th>
                 <th>需改善的項目</th>
             </tr>
+            <tr data-id="吳建利-1">
+                <td><input type="checkbox" class="item-checkbox"></td>
+                <td>HG0191365 宜蘭縣壯圍鄉國五宜蘭交流道旁超優質農地賣地送屋</td>
+                <td class="issue">特色少於70字</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- 桂珍珍 -->
+    <div class="partner-section" id="桂珍珍">
+        <h2>桂珍珍</h2>
+        <button class="delete-btn" onclick="deleteCheckedItems('桂珍珍')">刪除已勾選項目</button>
+        <table>
             <tr>
+                <th>勾選</th>
+                <th>物件</th>
+                <th>需改善的項目</th>
+            </tr>
+            <tr data-id="桂珍珍-1">
+                <td><input type="checkbox" class="item-checkbox"></td>
                 <td>UG1098625 優美華夏 台大校園 宜蘭大學 神農商圈</td>
                 <td class="issue">特色少於70字</td>
             </tr>
@@ -283,23 +460,66 @@
     </div>
 
     <!-- 林緁締 -->
-    <div class="partner-section">
+    <div class="partner-section" id="林緁締">
         <h2>林緁締</h2>
+        <button class="delete-btn" onclick="deleteCheckedItems('林緁締')">刪除已勾選項目</button>
         <table>
             <tr>
+                <th>勾選</th>
                 <th>物件</th>
                 <th>需改善的項目</th>
             </tr>
-            <tr>
+            <tr data-id="林緁締-1">
+                <td><input type="checkbox" class="item-checkbox"></td>
                 <td>HA0134019 壯圍新南免百萬稀有小農地排水要線旁</td>
                 <td class="issue">格局圖未繪製</td>
             </tr>
-            <tr>
+            <tr data-id="林緁締-2">
+                <td><input type="checkbox" class="item-checkbox"></td>
                 <td>UA0359635 花蓮吉安黃金地段多元合一透天店住</td>
                 <td class="issue">格局圖未繪製</td>
             </tr>
         </table>
     </div>
 
+    <script>
+        // 儲存已刪除項目的狀態
+        let deletedItems = JSON.parse(localStorage.getItem('deletedItems')) || [];
+
+        // 頁面載入時隱藏已刪除的項目
+        window.onload = function() {
+            // 詢問使用者身份
+            let userName = prompt("請問您是誰？（例如：林其衞、曾文俊）");
+            if (userName) {
+                let partnerSection = document.getElementById(userName);
+                if (partnerSection) {
+                    partnerSection.classList.add('visible');
+                } else {
+                    alert("找不到您的資料，請確認姓名是否正確！");
+                }
+            }
+
+            // 隱藏已刪除的項目
+            deletedItems.forEach(itemId => {
+                let row = document.querySelector(`tr[data-id="${itemId}"]`);
+                if (row) {
+                    row.remove();
+                }
+            });
+        };
+
+        // 刪除已勾選項目的功能
+        function deleteCheckedItems(partnerName) {
+            let checkboxes = document.querySelectorAll(`#${partnerName} .item-checkbox:checked`);
+            checkboxes.forEach(checkbox => {
+                let row = checkbox.closest('tr');
+                let itemId = row.getAttribute('data-id');
+                row.remove(); // 從頁面中移除該行
+                deletedItems.push(itemId); // 記錄已刪除的項目
+            });
+            // 儲存已刪除的項目到 localStorage
+            localStorage.setItem('deletedItems', JSON.stringify(deletedItems));
+        }
+    </script>
 </body>
 </html>
